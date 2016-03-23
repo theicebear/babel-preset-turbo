@@ -1,13 +1,23 @@
-
 module.exports = {
   plugins: [
+    // the order matters
+    // es2015+
+    require("babel-plugin-transform-async-to-generator-2"),
+    require("babel-plugin-transform-object-rest-spread"),
+    require("babel-plugin-transform-decorators-legacy").default,
+    require("babel-plugin-transform-class-properties"),
+    require("babel-plugin-add-module-exports"),
+
+    // other
+    require("babel-plugin-turbo-name"),
+
     // es2015
     require("babel-plugin-transform-es2015-template-literals"),
     require("babel-plugin-transform-es2015-literals"),
     require("babel-plugin-transform-es2015-function-name"),
     require("babel-plugin-transform-es2015-arrow-functions"),
     require("babel-plugin-transform-es2015-block-scoped-functions"),
-    require("babel-plugin-transform-es2015-classes", {loose: true}),
+    [require("babel-plugin-transform-es2015-classes"), {loose: true}],
     require("babel-plugin-transform-es2015-object-super"),
     require("babel-plugin-transform-es2015-shorthand-properties"),
     require("babel-plugin-transform-es2015-duplicate-keys"),
@@ -22,15 +32,5 @@ module.exports = {
     require("babel-plugin-transform-es2015-block-scoping"),
     require("babel-plugin-transform-es2015-typeof-symbol"),
     require("babel-plugin-transform-es2015-modules-commonjs"),
-
-    // es2015+
-    require("babel-plugin-transform-async-to-generator-2"),
-    require("babel-plugin-transform-object-rest-spread"),
-    require("babel-plugin-transform-decorators-legacy"),
-    require("babel-plugin-transform-class-properties"),
-    require("babel-plugin-add-module-exports"),
-
-    // other
-    require("babel-plugin-turbo-name"),
   ]
 };
