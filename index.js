@@ -6,7 +6,7 @@ module.exports = {
     require("babel-plugin-transform-object-rest-spread"),
     require("babel-plugin-transform-decorators-legacy").default,
     require("babel-plugin-transform-class-properties"),
-    require("babel-plugin-add-module-exports").default,
+    require("babel-plugin-add-module-exports"),
 
     // other
     require("babel-plugin-turbo-name"),
