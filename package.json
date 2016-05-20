@@ -42,6 +42,6 @@
     "babel-plugin-transform-es2015-typeof-symbol": "^6.6.0",
     "babel-plugin-transform-es2015-unicode-regex": "^6.5.0",
     "babel-plugin-transform-object-rest-spread": "^6.6.5",
-    "babel-plugin-turbo-name": "^2.0.1"
+    "babel-plugin-turbo-name": "^2.1.0"
   }
 }
